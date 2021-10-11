@@ -26,7 +26,7 @@ int main(int argc, char *argv[]){
         }
     }
 
-    printf("%d is %d", num, total);
+    printf("%d is \n%d", num, total);
     printf("\n");
 
     return 0;
