@@ -18,7 +18,7 @@ int main(int argc, char *argv[]){
     // Print the number of 2s that divide n
     while (n%2 == 0)
     {
-        printf("%d ", 2);
+        printf("%d * ", 2);
         n = n/2;
     }
  
@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
         // While i divides n, print i and divide n
         while (n%i == 0)
         {
-            printf("%d ", i);
+            printf("%d * ", i);
             n = n/i;
         }
     }
