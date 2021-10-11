@@ -19,7 +19,25 @@ int main(int argc, char *argv[]) {
 	float distance = atof(argv[1]);
 	int result;
 	//Your codes here
-	
+{
+    float TotalKm;
+    float Cost = 0;
+    printf("\n Input: ");
+    scanf("%f", &TotalKm);
+    if(TotalKm <= 2)
+    {
+        Cost = TotalKm * 15000;
+    }
+    else if(TotalKm <= 30  && TotalKm > 2 );
+    {
+        Cost = (TotalKm - 2)*2000/0.25 + 2*15000;
+    }
+	if(TotalKm > 30);
+    {
+        Cost = 1*15000 + (30-2)/0.25*2000 + (TotalKm - 30)*5000;
+    }
+    printf(" Output: %0.3f ", Cost);
+}
 	printf("%d", result);
 	return 0;
 }
