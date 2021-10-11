@@ -21,7 +21,50 @@ int main(int argc, char *argv[]) {
 		test_array[i] = atoi(argv[i+1]);
 	}
 	//Your codes here
-	
-	
-	return 0;
+{
+    int len = argc;
+    int next, current;
+    char *next_s, *current_s, *temp;
+  
+    for (int i = 1; i < len - 1; i++)
+    {
+        for (int j = i + 1; j < len; j++)
+	    {
+            current_s = argv[i];
+            next_s = argv[j];
+            current = atoi(current_s);
+            next = atoi(next_s);
+
+	        if(next < current)
+	        {
+                temp = argv[i];
+	            argv[i] = next_s;
+	            argv[j] = temp;
+	        }
+	    }
+    }
+    printf ("Sorted Array ");
+
+    for (int i = 1; i < len; i++)
+    {
+        printf ("%s ", argv[i]);
+    }
+    printf("\n");
+  
+    //printing first half of the array
+    for (int i = 1; i <= (len - 1) / 2; i++)
+    {
+        printf ("%s ", argv[i]);
+    }
+
+    //printing second half of the array
+    for (int i = len - 1; i > (len - 1) / 2; i--)
+    {
+        printf ("%s ", argv[i]);
+    }
+
+    printf("\n");
+    
+    return 0;
+}
 }
