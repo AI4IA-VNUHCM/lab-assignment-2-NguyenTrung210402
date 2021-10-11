@@ -13,29 +13,21 @@ ______________________________________
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdbool.h>
+int main(int argc, char *argv[]){
+    int num = atoi(argv[1]);
+    int total = 1;
 
-int main(int argc, char *argv[]) {
-    //testing variable, applying it to your algorithm for auto-evaluating
-    int n = atoi(argv[1]);
-    int result;
-	//Your codes here
-	int main ();
-{
-	int num, factorical = 1;
-	printf ("Input number: ");
-	scanf ("%d, &num");
+    if (num > 0){
+        int i = num % 2 == 0 ? 2 : 1;
+        while(i <= num){
+            total *= i;
+            i += 2;
+        }
+    }
 
-	if (num%2==0){
-		for (int i = 2; i<=num; i+=2) {
-			factorical = factorical * i;
-		}
-	}
-	else {
-		for (int i=1; i<= num; i +=2){
-			factorical*=i;
-		}
-	}
-	printf ("%d, factorical");
-	return 0;
-}
+    printf("Factorial of %d is %d", num, total);
+    printf("\n");
+
+    return 0;
 }
