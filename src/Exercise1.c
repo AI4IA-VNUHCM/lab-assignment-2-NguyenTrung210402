@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
     {
         Cost = 1*15000 + (30-2)/0.25*2000 + (TotalKm - 30)*5000;
     }
-    printf(" Output: %0.3f ", Cost);
+    printf(" Output: %f ", Cost);
 }
 	printf("%d", result);
 	return 0;
