@@ -38,6 +38,5 @@ int main(int argc, char *argv[]) {
     }
     printf(" Output: %f ", Cost);
 }
-	printf("%d", result);
 	return 0;
 }
