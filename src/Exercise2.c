@@ -27,7 +27,5 @@ int main(int argc, char *argv[]){
     }
 
     printf("%d \n %d", num, total);
-    printf("\n");
-
     return 0;
 }
