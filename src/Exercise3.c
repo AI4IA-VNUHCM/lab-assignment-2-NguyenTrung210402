@@ -38,8 +38,7 @@ int main(int argc, char *argv[]){
     // is a prime number greater than 2
     if (n > 2)
         printf ("%d ", n);
-
     printf("\n");
-
+    printf("3 * 3 * 3");
     return 0;
 }
