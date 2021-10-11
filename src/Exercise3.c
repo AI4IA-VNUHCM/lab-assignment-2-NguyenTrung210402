@@ -10,51 +10,36 @@ ______________________________________
 #include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
-int main(int argc, char *argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
-	int testcase = atoi(argv[1]);
-	
-	//Your codes here
-bool isPrime(int n)
-{
-    // Neu n < 2 thi khong phai la SNT
-    if (n < 2){
-        return false;
-    }
-
-    // Neu n = 2 la SNT
-    if (n == 2){
-        return true;
-    }
-
-    // Neu n la so chan thi ko phai la SNT
-    if (n % 2 == 0){
-        return false;
-    }
-
-    // Lap qua cac so le
-    for (int i = 3; i < (n - 1); i += 2){
-        if (n % i == 0){
-            return false;
-        }
-    }
-
-    return true;
-}
 
 int main(int argc, char *argv[]){
-    // printf("Input: %s\n", argv[1]);
-    // printf("Output: ");
     int n = atoi(argv[1]);
+    int total = 1;
 
-    for(int i = 2; i <= n; i ++){
-        if(isPrime(i)){
+    // Print the number of 2s that divide n
+    while (n%2 == 0)
+    {
+        printf("%d ", 2);
+        n = n/2;
+    }
+ 
+    // n must be odd at this point.  So we can skip
+    // one element (Note i = i +2)
+    for (int i = 3; i <= sqrt(n); i = i+2)
+    {
+        // While i divides n, print i and divide n
+        while (n%i == 0)
+        {
             printf("%d ", i);
+            n = n/i;
         }
     }
+ 
+    // This condition is to handle the case when n
+    // is a prime number greater than 2
+    if (n > 2)
+        printf ("%d ", n);
 
     printf("\n");
 
     return 0;
-}
 }
