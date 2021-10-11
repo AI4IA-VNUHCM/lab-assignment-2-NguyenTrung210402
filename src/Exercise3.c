@@ -37,8 +37,7 @@ int main(int argc, char *argv[]){
     // This condition is to handle the case when n
     // is a prime number greater than 2
     if (n > 2)
-        // printf ("%d ", n);
-    // printf("\n");
-    printf(" 3 * 3 * 3 ");
+    printf ("%d ", n);
+    printf("\n");
     return 0;
 }
